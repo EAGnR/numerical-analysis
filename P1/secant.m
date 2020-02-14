@@ -9,7 +9,7 @@ fprintf('\nRunning Secant method for equation (b):\n')
 secantMethod(@eqnB, initialP0, initialP1, tolerance, iterations);
 
 function p = secantMethod(fFunc,p0,p1,tol,n)
-    % This function performs Newton's method
+    % This function performs Secant method
     % in order to approximate the root of a function.
     % The input parameters are: 
     % target function, fFunc
