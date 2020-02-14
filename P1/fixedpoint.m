@@ -37,12 +37,12 @@ end % end of fixedpoint
 
 function y = g1(x)
 
-    y = (1.0 / 2.0) * (x^3.0 + 1.0);
+    y = (1.0 / 2.0) * (x^3 + 1.0);
 
 end % end of g1
 
 function y = g2(x)
 
-    y = (2.0 / x) - (1.0 / x^2.0);
+    y = (2.0 / x) - (1.0 / x^2);
 
 end % end of g2
