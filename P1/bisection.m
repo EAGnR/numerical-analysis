@@ -33,7 +33,7 @@ function p = bisectionMethod(fFunc,a,b,tol,n)
 
         fprintf('i:%d, p = %.9f\n', i, p);
 
-        if abs(fp) < tol || (i > 1 && abs(p - pPrev) < tol)
+        if i > 1 && abs(p - pPrev) < tol
             fprintf('The method converged after %d iterations!\n', i);
             return;
         end
