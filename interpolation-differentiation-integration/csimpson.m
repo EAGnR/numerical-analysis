@@ -20,23 +20,20 @@ function approx = compSimpson(a, b, n)
     % the amount of subintervals for the composite rule to use, n
 
     h = (b - a) / n;
-    xs = zeros(n);
 
-    for j = 1:n
-        xs(j) = a + j*h;
-    end
-
-    sum1 = 0;
+    sumEven = 0;
     for j = 1:(n/2 - 1)
-        sum1 = sum1 + f(xs(2*j));
+        x = a + (2*j)*h;
+        sumEven = sumEven + f(x);
     end
 
-    sum2 = 0;
+    sumOdd = 0;
     for j = 1:(n/2)
-        sum2 = sum2 + f(xs(2*j - 1));
+        x = a + (2*j - 1)*h;
+        sumOdd = sumOdd + f(x);
     end
     
-    approx = h/3 * (f(a) + 2*sum1 + 4*sum2 + f(b));
+    approx = h/3 * (f(a) + 2*sumEven + 4*sumOdd + f(b));
 
 end % end of compSimpson
 

@@ -20,18 +20,14 @@ function approx = compMidpoint(a, b, n)
     % the amount of subintervals for the composite rule to use, n
 
     h = (b - a) / (n + 2);
-    xs = zeros(n);
 
-    for j = 1:n
-        xs(j) = a + (j+1)*h;
-    end
-
-    sum1 = f(a + h); % The 0th x.
+    sumEven = f(a + h); % Adding the 0th x.
     for j = 1:(n/2)
-        sum1 = sum1 + f(xs(2*j));
+        x = a + ((2*j)+1)*h;
+        sumEven = sumEven + f(x);
     end
     
-    approx = 2*h * sum1;
+    approx = 2*h * sumEven;
 
 end % end of compMidpoint
 
