@@ -1,0 +1,54 @@
+Problem 1.
+$ ./runmatlab.sh interpolation-integration/hermite.m 
+
+Table =
+
+  10x11 table
+
+    z     f(z)    1st      2nd        3rd          4th          5th           6th            7th            8th            9th    
+    __    ____    ___    _______    ________    _________    __________    __________    ___________    ___________    ___________
+
+     0      0      0           0           0            0             0             0              0              0              0
+     0      0     75           0           0            0             0             0              0              0              0
+     3    225     75           0           0            0             0             0              0              0              0
+     3    225     77     0.66667     0.22222            0             0             0              0              0              0
+     5    383     79           1    0.066667    -0.031111             0             0              0              0              0
+     5    383     80         0.5       -0.25    -0.063333    -0.0064444             0              0              0              0
+     8    623     80           0        -0.1         0.03      0.011667     0.0022639              0              0              0
+     8    623     74          -2    -0.66667     -0.11333     -0.028667    -0.0050417    -0.00091319              0              0
+    13    993     74           0        0.25      0.11458      0.022792     0.0051458     0.00078365     0.00013053              0
+    13    993     72        -0.4       -0.08     -0.04125     -0.019479    -0.0042271    -0.00093729    -0.00013238    -2.0224e-05
+
+The approximation of position f(t) when t = 10, is H_9(10) = 742.502839, using the Hermite Polynomial.
+
+
+Problem 5.
+(1) $ ./runmatlab.sh interpolation-integration/ctrapezoidal.m 
+The approximations of the integral of f(x) from 0 to 2, using the Composite Trapezoidal Rule:
+
+Approximations:         Absolute Errors:
+I_4 = -11.753893,       |I - I_4| = 2.460084
+I_8 = -13.575979,       |I - I_8| = 0.637998
+I_16 = -14.053231,      |I - I_16| = 0.160746
+
+I = -14.213977 (exact)
+
+(2) $ ./runmatlab.sh interpolation-integration/csimpson.m 
+The approximations of the integral of f(x) from 0 to 2, using the Composite Simpson Rule:
+
+Approximations:         Absolute Errors:
+I_4 = -13.476844,       |I - I_4| = 0.737134
+I_8 = -14.183342,       |I - I_8| = 0.030636
+I_16 = -14.212315,      |I - I_16| = 0.001662
+
+I = -14.213977 (exact)
+
+(3) $ ./runmatlab.sh interpolation-integration/cmidpoint.m 
+The approximations of the integral of f(x) from 0 to 2, using the Composite Midpoint Rule:
+
+Approximations:         Absolute Errors:
+I_4 = -16.132333,       |I - I_4| = 1.918356
+I_8 = -14.998477,       |I - I_8| = 0.784500
+I_16 = -14.465049,      |I - I_16| = 0.251071
+
+I = -14.213977 (exact)
