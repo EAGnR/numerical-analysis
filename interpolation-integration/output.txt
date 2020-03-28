@@ -34,7 +34,7 @@ I_16 = -14.053231,      |I - I_16| = 0.160746
 I = -14.213977 (exact)
 
 (2) $ ./runmatlab.sh interpolation-integration/csimpson.m 
-The approximations of the integral of f(x) from 0 to 2, using the Composite Simpson Rule:
+The approximations of the integral of f(x) from 0 to 2, using the Composite Simpson's Rule:
 
 Approximations:         Absolute Errors:
 I_4 = -13.476844,       |I - I_4| = 0.737134

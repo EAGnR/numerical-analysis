@@ -3,7 +3,7 @@ b = 2;
 ns = [4,8,16];
 I = (exp(4)/13) * (2*sin(6) - 3*cos(6)) + (3/13);
 
-fprintf('The approximations of the integral of f(x) from %d to %d, using the Composite Simpson Rule:\n\n', a, b);
+fprintf('The approximations of the integral of f(x) from %d to %d, using the Composite Simpson''s Rule:\n\n', a, b);
 fprintf('Approximations: \tAbsolute Errors:\n');
 for i = 1:length(ns)
     n = ns(i);
@@ -15,7 +15,7 @@ fprintf('\nI = %f (exact)\n', I);
 
 function approx = compSimpson(a, b, n)
     % This function approximates the integral of the given function f(x), from
-    % the endpoints a to b. The method used is the Composite Simpson Rule.
+    % the endpoints a to b. The method used is the Composite Simpson's Rule.
     % the endpoints used as the limit of the definite integral, a, b
     % the amount of subintervals for the composite rule to use, n
 
