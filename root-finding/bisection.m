@@ -8,28 +8,28 @@ bisectionMethod(@eqnA, a, b, tolerance, iterations);
 fprintf('\nRunning bisection method for equation (b):\n')
 bisectionMethod(@eqnB, a, b, tolerance, iterations);
 
-function p = bisectionMethod(fFunc,a,b,tol,n)
+function p = bisectionMethod(f, a, b, tol, n)
     % This function performs a bisection or binary-search
     % in order to approximate the root of a function.
     % The input parameters are: 
-    % target function, fFunc
+    % target function, f
     % endpoints, a, b 
     % error tolerance, tol
     % max iterations, n
 
     fprintf('a = %.9f, b = %.9f, tolerance = %.9f\n', a, b, tol);
 
-    if fFunc(a) * fFunc(b) >= 0
+    if f(a) * f(b) >= 0
         fprintf('Since f(a)*f(b) >= 0 then bisection cannot converge on [%f,%f].\n', a, b);
         return;
     end
 
-    fa = fFunc(a);
+    fa = f(a);
     pPrev = 0.0;
 
     for i = 1:n
         p = (a + b) / 2.0;
-        fp = fFunc(p);
+        fp = f(p);
 
         fprintf('i:%d, p = %.9f\n', i, p);
 

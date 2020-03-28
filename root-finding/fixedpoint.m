@@ -7,11 +7,11 @@ fixedPointIteration(@g1, initialP0, tolerance, iterations);
 fprintf('\nRunning fixed-point iteration method g2:\n')
 fixedPointIteration(@g2, initialP0, tolerance, iterations);
 
-function p = fixedPointIteration(gFunc,p0,tol,n)
+function p = fixedPointIteration(g, p0, tol, n)
     % This function performs fixed-point iteration
     % in order to approximate the root of a function.
     % The input parameters are: 
-    % fixed-point method, gFunc
+    % fixed-point method, g
     % initial approximation, p0 
     % error tolerance, tol
     % max iterations, n
@@ -19,7 +19,7 @@ function p = fixedPointIteration(gFunc,p0,tol,n)
     fprintf('p0 = %.9f, tolerance = %.9f\n', p0, tol);
 
     for i = 1:n
-        p = gFunc(p0);
+        p = g(p0);
 
         fprintf('i:%d, p = %.9f\n', i, p);
 

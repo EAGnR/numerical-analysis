@@ -11,11 +11,11 @@ newtonsMethod(eqnA, initialP0, tolerance, iterations);
 fprintf('\nRunning Newton''s method for equation (b):\n')
 newtonsMethod(eqnB, initialP0, tolerance, iterations);
 
-function p = newtonsMethod(fFunc,p0,tol,n)
+function p = newtonsMethod(f, p0, tol, n)
     % This function performs Newton's method
     % in order to approximate the root of a function.
     % The input parameters are: 
-    % target symbolic function, fFunc
+    % target symbolic function, f
     % initial approximation, p0 
     % error tolerance, tol
     % max iterations, n
@@ -23,11 +23,11 @@ function p = newtonsMethod(fFunc,p0,tol,n)
     fprintf('p0 = %.9f, tolerance = %.9f\n', p0, tol);
 
     % Differentiate target function, and convert from symbolic to numeric.
-    fFuncPrime = matlabFunction(diff(fFunc));
-    fFunc = matlabFunction(fFunc);
+    fPrime = matlabFunction(diff(f));
+    f = matlabFunction(f);
 
     for i = 1:n
-        p = p0 - (fFunc(p0) / fFuncPrime(p0));
+        p = p0 - (f(p0) / fPrime(p0));
 
         fprintf('i:%d, p = %.9f\n', i, p);
 
