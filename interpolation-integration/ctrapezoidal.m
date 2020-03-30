@@ -21,13 +21,13 @@ function approx = compTrapezoidal(a, b, n)
 
     h = (b - a) / n;
 
-    sum1 = 0;
+    sumAll = 0;
     for j = 1:(n-1)
         x = a + j*h;
-        sum1 = sum1 + f(x);
+        sumAll = sumAll + f(x);
     end
     
-    approx = h/2 * (f(a) + 2*sum1 + f(b));
+    approx = h/2 * (f(a) + 2*sumAll + f(b));
 
 end % end of compTrapezoidal
 
