@@ -16,7 +16,7 @@ fprintf('\nI = %f (exact)\n', I);
 function approx = compTrapezoidal(a, b, n)
     % This function approximates the integral of the given function f(x), from
     % the endpoints a to b. The method used is the Composite Trapezoidal Rule.
-    % the endpoints used as the limit of the definite integral, a, b
+    % the endpoints used as the limits of the definite integral, a, b
     % the amount of subintervals for the composite rule to use, n
 
     h = (b - a) / n;
